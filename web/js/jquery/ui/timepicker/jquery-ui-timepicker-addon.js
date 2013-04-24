@@ -1536,4 +1536,4 @@ var timeZoneString = function(date)
 $.timepicker = new Timepicker(); // singleton instance
 $.timepicker.version = "1.0.1";
 
-})(jQuery);
+})(jQueryPicker);
