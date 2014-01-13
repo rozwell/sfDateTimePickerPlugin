@@ -25,4 +25,5 @@
 }
 .ui-datepicker-trigger {
   cursor: pointer;
+  vertical-align: text-top;
 }
