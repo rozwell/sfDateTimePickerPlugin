@@ -104,6 +104,12 @@ class sfWidgetFormDatePicker extends sfWidgetFormInputText
     $attributes['class'] = 'sfDateTimePicker'.(isset($attributes['class']) ? ' '.$attributes['class'] : '');
 
     $html = parent::render($name, $value, $attributes, $errors);
+    foreach($this->getStylesheets() as $file => $options){
+      $html .= stylesheet_tag($file, $options);
+    }
+    foreach($this->getJavaScripts() as $file){
+      $html .= javascript_include_tag($file);
+    }
     $html .= <<<EOHTML
 
 <script type="text/javascript">
